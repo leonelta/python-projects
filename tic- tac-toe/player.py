@@ -8,3 +8,6 @@ class Player:
 
     #we want all players to get their next move given a game
     def get_move(self, game):
+        pass
+
+class RandomComputerPlayer(Player):
