@@ -26,4 +26,11 @@ class HumanPlayer(Player):
     def get_move(self, game):
         valid_square = False
         val = None
+        while not valid_square:
+            square = input(self.letter + '\'s turn, Input move (8-9):')
+
+            try:
+                val = int(square)
+                if val not in game.available_moves():
+                    raise ValueError
     
