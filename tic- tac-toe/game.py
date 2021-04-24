@@ -16,10 +16,12 @@ class TicTacToe:
 
     def available_moves(self):
         return [i for i, spot in enumerate(self.board) if spot == '']
-        #return []
-       # moves = []
-       # for (i, x) in enumerate(self.board):
-       #     if spot == '':
-       #        moves.append(i)
-       # return moves
 
+    def empty_square(self):
+        return '' in self.board
+        
+def play(game, x_player, o_player, print_game=True):
+    if print_game:
+        game.print_board_nums()
+
+    letter = 'X'
