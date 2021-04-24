@@ -17,11 +17,13 @@ class RandomComputerPlayer(Player):
     def get_move(self, game):
         #get a random variable spot for the next move
         square = random.choice(game.available_moves())
+        return square
 
 class HumanPlayer(Player):
     def __init__(self, letter):
         super().__init__(letter)
 
     def get_move(self, game):
-        pass
+        valid_square = False
+        val = None
     
