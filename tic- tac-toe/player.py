@@ -64,4 +64,7 @@ def GeniusComputerPlayer(Player):
         elif not state.empty_squares():
             return('position': None, 'score': 0)
 
+        if player == max_player:
+            best = ('position': None, 'score': -math.inf)
+
 
