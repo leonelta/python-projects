@@ -61,8 +61,7 @@ class TicTacToe:
             diagonal2 = [self.board[i] for i in [2, 4, 6]] #right to left diagonal
             if all([spot == letter for spot in diagonal2]):
                 return True
-
-                return False
+             return False
 
 
 def play(game, x_player, o_player, print_game=True):
