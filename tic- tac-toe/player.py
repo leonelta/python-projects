@@ -48,4 +48,8 @@ def GeniusComputerPlayer(Player):
             square = random.choice(game.available_moves())
         else:
             square = self.minimax(game, self.letter)
+        return square
+
+    def minimax(self, state, player):
+        
 
