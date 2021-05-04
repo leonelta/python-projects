@@ -51,5 +51,5 @@ def GeniusComputerPlayer(Player):
         return square
 
     def minimax(self, state, player):
-        
+        max_player = self.letter 
 
