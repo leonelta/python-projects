@@ -4,6 +4,9 @@ class Board:
         self.dim_size = dim_size
         self.num_bombs = num_bombs
         
+        #helper function
+        self.board = self.make_new_board()
+        
         #we'll save (row,col) tuples into this set
         self.dug = set()
       
