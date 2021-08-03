@@ -9,6 +9,10 @@ class Board:
         
         #we'll save (row,col) tuples into this set
         self.dug = set()
+    
+        
+    def make_new_board(self):
+        
       
 #play the game
 def play(dim_size = 10, num_bombs = 10):
