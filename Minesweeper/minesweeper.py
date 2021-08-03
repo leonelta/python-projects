@@ -1,3 +1,5 @@
+import random
+
 #lets craeate a board object to represent the minesweeper game
 class Board:
     def __init__(self, dim_size, num_bombs):
@@ -15,6 +17,16 @@ class Board:
         
         #generate a new board
         board = [[None for _ in range(self.dim_size)] for _ in range(self.dim_size)]
+        #this creates an array like this:
+        #[[None, None,..., None],
+        # [None, None,..., None],
+        # [...]
+        # [None, None,..., None]]
+        
+        #plant the bombs
+        bombs_planted = 0
+        while bombs_planted < self.num_bombs:
+            loc = random.randint(0, self.dim_size**2 - 1)
         
       
 #play the game
