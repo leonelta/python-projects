@@ -10,8 +10,11 @@ class Board:
         #we'll save (row,col) tuples into this set
         self.dug = set()
     
-        
+        # construct a new board based on the dim size amd num bombs
     def make_new_board(self):
+        
+        #generate a new board
+        board = [[None for _ in range(self.dim_size)] for _ in range(self.dim_size)]
         
       
 #play the game
