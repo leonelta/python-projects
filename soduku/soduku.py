@@ -22,3 +22,6 @@ def solve_sudoku(puzzle):
     #step 1.1: if there's no space left, then we're done because we only allowed valid inputs
     if row is None:
         return True
+    
+    #step 2: if there is a place to put a number, then make a guess btw 1 and 9
+    for guess in range(1, 10):
