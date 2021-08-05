@@ -8,7 +8,7 @@ def find_next_empty(puzzle):
             if puzzle[r][c] == -1:
                 return r, c
             
-    return None, None
+    return None, None # if no spaces in the puzzle are empty(-1)
 
 def solve_sudoku(puzzle):
     #solve sudoku using backtracking!
