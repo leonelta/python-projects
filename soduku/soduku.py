@@ -28,10 +28,19 @@ def is_valid(puzzle, guess, row, col):
             return False
         
     #aand then the square
-    #we want to get where the x3 square starts
+    #we want to get where the 3x3 square starts
     #and iterate over the  values in the row/column
     row_start = (row // 3) * 3
     col_start = (col // 3) * 3
+    
+    for r in range(row_start, row_start + 3):
+        for c in range(col_start, col_start + 3):
+            if puzzle[r][c] == guess:
+                return False
+            
+    # if we get here , these checks pass
+    return True
+
 
 def solve_sudoku(puzzle):
     #solve sudoku using backtracking!
@@ -50,3 +59,23 @@ def solve_sudoku(puzzle):
     for guess in range(1, 10): #range(1,10) is 1,2 ...9
         #step 3: check if this a valid guess
         if is_valid(puzzle, guess, row, col):
+            puzzle[row][col] = guess
+            #recurse using this puzzzle
+            #step 4: recursively call our function
+            if solve_sudoku(puzzle):
+                return True
+            
+        #step 5: if not valid or if or guess does not solve the puzzle, then we need to 
+        #backtrack and try a new number
+        puzzle[row][col] = -1 #reset the guess
+        
+        
+    #stdep 6: if none of the numbers that we try work, then this puzzle is unsolvable
+    return False
+
+if __name__ == '__main__':
+    example_board = [
+        [3,9,-1,   -1,5,-1,   -1,-1,-1],
+        [-1,-1,-1, 2,-1,-1,   -1,-1,5 ],
+        [-1,-1,-1, 7, 1, 9,   -1, 8,-1],
+    ]
