@@ -1,10 +1,10 @@
 from sys import argv
 
-file, filet = argv
+script, filename = argv
 
-txt = open(filet.txt)
+txt = open(filename)
 
-print(f"Here's your file {filet}:")
+print("Here's your file %r:" % filename)
 print(txt.read())
 
 print("Type the filename again: ")
