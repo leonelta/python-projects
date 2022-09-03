@@ -13,3 +13,7 @@ target = open(filename, 'w')
 
 print("Truncating the file. Goodbye!")
 target.truncate()
+
+print("Now I'm going to ask you for three lines.")
+
+line1 = raw_input("line 1: ")
