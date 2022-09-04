@@ -15,4 +15,12 @@ elif selection == 2:
     print(file.read())
     
 elif selection == 3:
+    file = open("subject.txt", "a")
+    subject = input("Enter another subject: ")
+    file.write(subject + "\n")
+    file.close()
+    file = open("subject.txt", "r")
+    print(file.read())
     
+else:
+    print("invalid option")
