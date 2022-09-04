@@ -12,3 +12,7 @@ def print_a_file(line_count, f):
     print(line_count, f.readline())
     
 current_file = open(input_file)
+
+print("First let's print the whole file:\n")
+
+print_all(current_file)
