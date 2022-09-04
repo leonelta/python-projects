@@ -11,4 +11,8 @@ if selection == 1:
     file.close()
     
 elif selection == 2:
+    file = open("subject.txt", "r")
+    print(file.read())
+    
+elif selection == 3:
     
