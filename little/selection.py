@@ -6,3 +6,9 @@ selection = int(input("Make a selection 1, 2 or 3: "))
 
 if selection == 1:
     subject = input("Enter a school subject: ")
+    file = open("subject.txt", 'w')
+    file.write(subject + "\n")
+    file.close()
+    
+elif selection == 2:
+    
