@@ -22,4 +22,7 @@ if people >= dogs:
 if people <= dogs:
     print("People are less than or equal to dogs")
 
+if people == dogs:
+    print("People are dogs")
+
     
