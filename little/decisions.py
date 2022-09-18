@@ -9,3 +9,6 @@ if door == "1":
     
     bear = raw_input("> ")
     if bear == "1":
+        print("Th bear eats your face off. Good job!")
+    elif bear == "2":
+        
