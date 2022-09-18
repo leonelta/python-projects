@@ -16,3 +16,11 @@ if door == "1":
         print("Well, doing %s is probably better. Bar runs away." % bear)
         
 elif door == "2":
+    print("You stare into the endless abyss at Cthulhu's retina")
+    print("1. Blueberries")
+    print("2. Yellow jacket clothespins")
+    print("3. Understanding revolvers yelling melodies")
+    
+    insanity = raw_input(">")
+    
+    
