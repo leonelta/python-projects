@@ -13,4 +13,6 @@ if door == "1":
     elif bear == "2":
         print("Th bear eats your legs off. Good job!")
     else:
+        print("Well, doing %s is probably better. Bar runs away." % bear)
         
+elif door == "2":
