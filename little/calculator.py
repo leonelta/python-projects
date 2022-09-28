@@ -1,6 +1,7 @@
 from tkinter import *
 
 def btnClick(numbers):
+    global operator
 
 cal = Tk()
 cal.title("Calculator")
