@@ -9,6 +9,10 @@ def btnClick(numbers):
 def btnClearDisplay():
     global operator
     operator=""
+    text_Input.set("")
+    
+def btnEqualsInput():
+    
 
 cal = Tk()
 cal.title("Calculator")
@@ -48,7 +52,7 @@ Multiply = Button(cal, padx=16, pady=16, bd=8, fg="black",  font=('arial', 20, '
 btn0 = Button(cal, padx=16, pady=16, bd=8, fg="black",  font=('arial', 20, 'bold'),
               text = "0", bg = "powder blue", command=lambda:btnClick(0)).grid(row =4, column =0)
 btnClear = Button(cal, padx=16, pady=16, bd=8, fg="black",  font=('arial', 20, 'bold'),
-              text = "C", bg = "powder blue").grid(row =4, column =1)
+              text = "C", bg = "powder blue", command= btnClearDisplay).grid(row =4, column =1)
 btnEquals = Button(cal, padx=16, pady=16, bd=8, fg="black",  font=('arial', 20, 'bold'),
               text = "=", bg = "powder blue").grid(row =4, column =2)
 Division = Button(cal, padx=16, pady=16, bd=8, fg="black",  font=('arial', 20, 'bold'),
