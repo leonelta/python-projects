@@ -1,7 +1,10 @@
+from distutils.cmd import Command
 from tkinter import *
 
 def btnClick(numbers):
     global operator
+    operator = operator + str(numbers)
+    text_Input.set(operator)
 
 cal = Tk()
 cal.title("Calculator")
@@ -12,7 +15,7 @@ txtDisplay = Entry(cal, textvariable=text_Input, font=('arial', 20, 'bold'), bd 
                    insertwidth = 4, bg = "powder blue", justify= 'right' ).grid(columnspan = 4)
 
 btn7 = Button(cal, padx=16, pady=16, bd=8, fg="black",  font=('arial', 20, 'bold'),
-              text = "7", bg = "powder blue").grid(row =1, column =0)
+              text = "7", command=lambda:btnClick(7), bg = "powder blue").grid(row =1, column =0)
 btn8 = Button(cal, padx=16, pady=16, bd=8, fg="black",  font=('arial', 20, 'bold'),
               text = "8", bg = "powder blue").grid(row =1, column =1)
 btn9 = Button(cal, padx=16, pady=16, bd=8, fg="black",  font=('arial', 20, 'bold'),
