@@ -12,6 +12,8 @@ def btnClearDisplay():
     text_Input.set("")
     
 def btnEqualsInput():
+    global operator
+    sumup = str(eval(operator))
     
 
 cal = Tk()
